@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Linkedin, Mail, MessageCircle, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import logoAsset from "@/assets/dl-talent-logo.png.asset.json";
 
 export function Footer() {
   const [email, setEmail] = useState("");
