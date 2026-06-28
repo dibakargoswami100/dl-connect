@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
+import logoAsset from "@/assets/dl-talent-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
