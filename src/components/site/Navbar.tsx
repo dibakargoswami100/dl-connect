@@ -32,9 +32,11 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 group">
-          <div className="grid h-9 w-9 shrink-0 place-items-center rounded-lg gradient-primary text-primary-foreground font-display font-bold shadow-elegant">
-            DL
-          </div>
+          <img
+            src={logoAsset.url}
+            alt="DL Talent & Technology"
+            className="h-10 w-auto shrink-0 rounded-lg"
+          />
           <div className="min-w-0">
             <div className="font-display font-semibold text-sm sm:text-base leading-tight truncate">
               DL Talent & Technology

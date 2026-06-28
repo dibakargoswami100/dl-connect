@@ -22,9 +22,11 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <div className="grid h-9 w-9 place-items-center rounded-lg gradient-primary text-primary-foreground font-display font-bold">
-                DL
-              </div>
+              <img
+                src={logoAsset.url}
+                alt="DL Talent & Technology"
+                className="h-10 w-auto rounded-lg"
+              />
               <span className="font-display font-semibold">DL Talent & Technology</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
