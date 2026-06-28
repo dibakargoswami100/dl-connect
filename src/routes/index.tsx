@@ -8,6 +8,7 @@ import { Button } from "@/components/ui/button";
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
+import logoAsset from "@/assets/dl-talent-logo.png.asset.json";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -75,6 +76,13 @@ function HomePage() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
               <Reveal>
+                <img
+                  src={logoAsset.url}
+                  alt="DL Talent & Technology"
+                  className="h-20 sm:h-24 w-auto mb-4"
+                />
+              </Reveal>
+              <Reveal delay={40}>
                 <span className="inline-flex items-center gap-2 rounded-full border border-border bg-card/60 px-3 py-1 text-xs font-medium text-foreground/80 backdrop-blur">
                   <Sparkles className="h-3.5 w-3.5 text-primary" />
                   Trusted by startups across 12+ countries
