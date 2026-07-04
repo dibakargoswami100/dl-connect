@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logoAsset from "@/assets/dl-talent-logo.png.asset.json";
+import { ThemeToggle } from "@/components/site/ThemeToggle";
 
 const links = [
   { to: "/", label: "Home" },
@@ -62,18 +63,23 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <ThemeToggle />
           <Button asChild variant="default" className="gradient-primary text-primary-foreground border-0 shadow-elegant hover:opacity-95">
             <Link to="/contact">Get a Quote</Link>
           </Button>
         </div>
 
-        <button
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+        <div className="lg:hidden flex items-center gap-2">
+          <ThemeToggle />
+
+          <button
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (
