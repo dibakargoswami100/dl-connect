@@ -72,13 +72,14 @@ export function Navbar() {
         <div className="lg:hidden flex items-center gap-2">
           <ThemeToggle />
 
-        <button
-          className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
-          onClick={() => setOpen((v) => !v)}
-          aria-label="Toggle menu"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          <button
+            className="inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
+            onClick={() => setOpen((v) => !v)}
+            aria-label="Toggle menu"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (
