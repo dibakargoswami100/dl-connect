@@ -63,10 +63,14 @@ export function Navbar() {
         </nav>
 
         <div className="hidden lg:flex items-center gap-3">
+          <ThemeToggle />
           <Button asChild variant="default" className="gradient-primary text-primary-foreground border-0 shadow-elegant hover:opacity-95">
             <Link to="/contact">Get a Quote</Link>
           </Button>
         </div>
+
+        <div className="lg:hidden flex items-center gap-2">
+          <ThemeToggle />
 
         <button
           className="lg:hidden inline-flex h-10 w-10 items-center justify-center rounded-md border border-border"
