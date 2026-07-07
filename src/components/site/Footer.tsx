@@ -2,6 +2,7 @@ import { Link } from "@tanstack/react-router";
 import { Linkedin, Mail, MessageCircle, ArrowRight } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
+import logoAsset from "@/assets/dl-talent-logo.png.asset.json";
 
 export function Footer() {
   const [email, setEmail] = useState("");
@@ -21,9 +22,13 @@ export function Footer() {
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div>
             <div className="flex items-center gap-2">
-              <div className="h-9 w-9 rounded-lg gradient-primary grid place-items-center text-primary-foreground font-display font-bold text-sm">
-                DL
-              </div>
+              <img
+                src={logoAsset.url}
+                alt="DL Talent & Technology"
+                loading="lazy"
+                decoding="async"
+                className="h-8 w-8 sm:h-9 sm:w-9 rounded-lg object-contain"
+              />
               <span className="font-display font-semibold">DL Talent & Technology</span>
             </div>
             <p className="mt-4 text-sm text-muted-foreground leading-relaxed">
