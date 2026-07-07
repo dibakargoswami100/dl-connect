@@ -2,7 +2,6 @@ import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
 import { Menu, X } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import logoAsset from "@/assets/dl-talent-logo.png.asset.json";
 import { ThemeToggle } from "@/components/site/ThemeToggle";
 
 const links = [
@@ -33,11 +32,9 @@ export function Navbar() {
     >
       <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-4 sm:px-6 lg:px-8">
         <Link to="/" className="flex items-center gap-2 group">
-          <img
-            src={logoAsset.url}
-            alt="DL Talent & Technology"
-            className="h-10 w-auto shrink-0 rounded-lg"
-          />
+          <div className="h-9 w-9 rounded-lg gradient-primary grid place-items-center text-primary-foreground font-display font-bold text-sm">
+            DL
+          </div>
           <div className="min-w-0">
             <div className="font-display font-semibold text-sm sm:text-base leading-tight truncate">
               DL Talent & Technology
