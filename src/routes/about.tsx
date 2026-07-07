@@ -18,20 +18,12 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const leaders = [
-  {
-    name: "Lata Bari",
-    role: "Founder & CEO",
-    bio: "Lata leads strategy and partnerships at DL Talent & Technology. She brings deep expertise in talent acquisition, HR practices and building high-performing remote teams for startups across the globe.",
-    initials: "LB",
-  },
-  {
-    name: "Dibakar Goswami",
-    role: "Co-Founder & Operations Lead",
-    bio: "Dibakar oversees operations, recruitment coordination, client management and our technology services. He ensures every engagement runs smoothly — from kickoff to long-term delivery.",
-    initials: "DG",
-  },
-];
+const leader = {
+  name: "Dibakar Goswami",
+  role: "Co-Founder & Operations Lead",
+  bio: "Dibakar oversees operations, recruitment coordination, client management and our technology services. He ensures every engagement runs smoothly — from kickoff to long-term delivery.",
+  initials: "DG",
+};
 
 function AboutPage() {
   return (
