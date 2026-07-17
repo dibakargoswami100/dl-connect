@@ -9,6 +9,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Reveal } from "@/components/site/Reveal";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
 
 export const Route = createFileRoute("/contact")({
   head: () => ({
@@ -43,9 +44,10 @@ function ContactPage() {
   const [service, setService] = useState("");
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const data = {
       name: String(fd.get("name") || ""),
       email: String(fd.get("email") || ""),
@@ -60,12 +62,23 @@ function ContactPage() {
       return;
     }
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
-      toast.success("Thanks! We'll get back to you within 1 business day.");
-      (e.target as HTMLFormElement).reset();
-      setService("");
-    }, 800);
+    const { error } = await supabase.from("contact_submissions").insert({
+      name: parsed.data.name,
+      email: parsed.data.email,
+      phone: parsed.data.phone || null,
+      company: parsed.data.company || null,
+      service: parsed.data.service,
+      message: parsed.data.message,
+    });
+    setSubmitting(false);
+    if (error) {
+      console.error(error);
+      toast.error("Something went wrong. Please try again.");
+      return;
+    }
+    toast.success("Thanks! We'll get back to you within 1 business day.");
+    form.reset();
+    setService("");
   };
 
   return (
