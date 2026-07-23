@@ -127,7 +127,7 @@ function AboutPage() {
                   <p className="text-sm text-primary font-semibold tracking-wide uppercase mt-1">{leader.role}</p>
                   <div className="mt-5 h-px w-12 gradient-primary" />
                   <p className="mt-5 text-muted-foreground leading-relaxed">{leader.bio}</p>
-                  <a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-80 transition-opacity">
+                  <a href="https://www.linkedin.com/company/dl-talent-technology-%E2%AD%90/?viewAsMember=true" target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-80 transition-opacity">
                     <Linkedin className="h-4 w-4" /> Connect on LinkedIn
                   </a>
                 </div>

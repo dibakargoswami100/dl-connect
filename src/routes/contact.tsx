@@ -148,28 +148,28 @@ function ContactPage() {
                     <Mail className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <div className="text-muted-foreground">Email</div>
-                      <a href="mailto:hello@dltalenttech.com" className="font-medium hover:text-primary">hello@dltalenttech.com</a>
+                      <a href="mailto:dltalenttechnology@gmail.com" className="font-medium hover:text-primary">dltalenttechnology@gmail.com</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Linkedin className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <div className="text-muted-foreground">LinkedIn</div>
-                      <a href="https://www.linkedin.com" target="_blank" rel="noreferrer noopener" className="font-medium hover:text-primary">DL Talent & Technology</a>
+                      <a href="https://www.linkedin.com/company/dl-talent-technology-%E2%AD%90/?viewAsMember=true" target="_blank" rel="noreferrer noopener" className="font-medium hover:text-primary">DL Talent & Technology</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <MessageCircle className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <div className="text-muted-foreground">WhatsApp</div>
-                      <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer noopener" className="font-medium hover:text-primary">Chat with us</a>
+                      <a href="https://wa.me/919073599179" target="_blank" rel="noreferrer noopener" className="font-medium hover:text-primary">Chat with us</a>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
                     <Clock className="h-5 w-5 text-primary mt-0.5" />
                     <div>
                       <div className="text-muted-foreground">Working hours</div>
-                      <div className="font-medium">Mon – Sat · 9:00 – 19:00 IST</div>
+                      <div className="font-medium">Mon – Sun · 9:00 – 22:00 IST</div>
                     </div>
                   </li>
                   <li className="flex items-start gap-3">
@@ -182,7 +182,7 @@ function ContactPage() {
                 </ul>
               </div>
 
-              <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer noopener" className="block rounded-3xl gradient-primary p-6 text-primary-foreground shadow-elegant hover:opacity-95 transition-opacity">
+              <a href="https://wa.me/919073599179" target="_blank" rel="noreferrer noopener" className="block rounded-3xl gradient-primary p-6 text-primary-foreground shadow-elegant hover:opacity-95 transition-opacity">
                 <div className="flex items-center gap-3">
                   <MessageCircle className="h-6 w-6" />
                   <div className="font-display font-semibold">Chat on WhatsApp</div>
