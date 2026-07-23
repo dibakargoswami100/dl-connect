@@ -35,13 +35,13 @@ export function Footer() {
               Connecting Talent. Delivering Technology. Driving Growth — for startups and growing businesses worldwide.
             </p>
             <div className="mt-5 flex items-center gap-3">
-              <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="https://www.linkedin.com/company/dl-talent-technology-%E2%AD%90/?viewAsMember=true" target="_blank" rel="noreferrer noopener" aria-label="LinkedIn" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Linkedin className="h-4 w-4" />
               </a>
-              <a href="mailto:hello@dltalenttech.com" aria-label="Email" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="mailto:dltalenttechnology@gmail.com" aria-label="Email" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
                 <Mail className="h-4 w-4" />
               </a>
-              <a href="https://wa.me/919999999999" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
+              <a href="https://wa.me/919073599179" target="_blank" rel="noreferrer noopener" aria-label="WhatsApp" className="grid h-9 w-9 place-items-center rounded-md border border-border hover:bg-primary hover:text-primary-foreground transition-colors">
                 <MessageCircle className="h-4 w-4" />
               </a>
             </div>
