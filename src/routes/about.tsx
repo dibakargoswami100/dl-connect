@@ -121,8 +121,8 @@ function AboutPage() {
                 </div>
                 <div className="h-36 gradient-primary" />
                 <div className="px-10 pb-10 -mt-20">
-                  <div className="grid h-32 w-32 place-items-center rounded-3xl bg-card border-2 border-primary/20 text-4xl font-display font-bold text-gradient shadow-elegant">
-                    {leader.initials}
+                  <div className="h-32 w-32 rounded-3xl bg-card border-2 border-primary/20 overflow-hidden shadow-elegant">
+                    <img src={leader.photo} alt={leader.name} loading="lazy" decoding="async" className="h-full w-full object-cover" />
                   </div>
                   <h3 className="mt-6 text-2xl font-display font-bold">{leader.name}</h3>
                   <p className="text-sm text-primary font-semibold tracking-wide uppercase mt-1">{leader.role}</p>
