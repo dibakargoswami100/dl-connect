@@ -3,6 +3,7 @@ import { Target, Eye, Award, Users, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
+import dibakarPhoto from "@/assets/dibakar-goswami.png.asset.json";
 
 export const Route = createFileRoute("/about")({
   head: () => ({
