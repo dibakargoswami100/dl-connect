@@ -23,7 +23,7 @@ const leader = {
   name: "Dibakar Goswami",
   role: "Co-Founder & Operations Lead",
   bio: "Dibakar oversees operations, recruitment coordination, client management and our technology services. He ensures every engagement runs smoothly — from kickoff to long-term delivery.",
-  initials: "DG",
+  photo: dibakarPhoto.url,
 };
 
 function AboutPage() {
