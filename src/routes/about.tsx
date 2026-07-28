@@ -21,8 +21,8 @@ export const Route = createFileRoute("/about")({
 
 const leader = {
   name: "Dibakar Goswami",
-  role: "Co-Founder & Operations Lead",
-  bio: "Dibakar oversees operations, recruitment coordination, client management and our technology services. He ensures every engagement runs smoothly — from kickoff to long-term delivery.",
+  role: "Founder & CEO",
+  bio: "As the Founder and CEO of DL Talent & Technology, Dibakar drives the company’s strategic vision, empowering global businesses with top-tier talent and innovative technology solutions. With deep expertise in operations and team building, he is dedicated to driving scalable growth and digital transformation for our clients.",
   photo: dibakarPhoto.url,
 };
 
@@ -128,7 +128,7 @@ function AboutPage() {
                   <p className="text-sm text-primary font-semibold tracking-wide uppercase mt-1">{leader.role}</p>
                   <div className="mt-5 h-px w-12 gradient-primary" />
                   <p className="mt-5 text-muted-foreground leading-relaxed">{leader.bio}</p>
-                  <a href="https://www.linkedin.com/company/dl-talent-technology-%E2%AD%90/?viewAsMember=true" target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-80 transition-opacity">
+                  <a href="https://www.linkedin.com/in/dibakar-goswami-62910327a" target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-80 transition-opacity">
                     <Linkedin className="h-4 w-4" /> Connect on LinkedIn
                   </a>
                 </div>
