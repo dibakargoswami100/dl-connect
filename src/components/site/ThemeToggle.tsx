@@ -42,7 +42,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
       onClick={toggle}
       aria-label="Toggle dark mode"
       aria-pressed={theme === "dark"}
-      className={`inline-flex h-10 w-10 items-center justify-center rounded-md border border-border bg-background hover:bg-secondary transition-colors ${className}`}
+      className={`inline-flex h-10 w-10 items-center justify-center rounded-xl glass-card transition-all duration-300 hover:border-primary/50 hover:text-primary ${className}`}
     >
       {mounted && theme === "dark" ? (
         <Sun className="h-4 w-4" />
