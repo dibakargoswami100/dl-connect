@@ -73,9 +73,10 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
     meta: [
       { charSet: "utf-8" },
       { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { title: "DL Talent & Technology — Connecting Talent. Delivering Technology." },
-      { name: "description", content: "Recruitment, virtual assistance, customer support, content & web development for startups and growing businesses." },
+      { title: "DL Talent & Technology — Talent. Technology. Growth." },
+      { name: "description", content: "Recruitment, HR solutions, virtual assistance, customer support, AI solutions and web development for startups, SMEs and enterprises." },
       { name: "author", content: "DL Talent & Technology" },
+      { name: "theme-color", content: "#050816" },
       { property: "og:site_name", content: "DL Talent & Technology" },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
@@ -84,7 +85,7 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Inter:wght@400;500;600;700&display=swap" },
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -94,9 +95,9 @@ export const Route = createRootRouteWithContext<{ queryClient: QueryClient }>()(
 });
 
 function RootShell({ children }: { children: ReactNode }) {
-  const themeScript = `(function(){try{var t=localStorage.getItem('theme');if(!t){t=window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light';}if(t==='dark'){document.documentElement.classList.add('dark');}document.documentElement.style.colorScheme=t;}catch(e){}})();`;
+  const themeScript = `(function(){try{var t=localStorage.getItem('theme')||'dark';if(t==='dark'){document.documentElement.classList.add('dark');}document.documentElement.style.colorScheme=t;}catch(e){document.documentElement.classList.add('dark');}})();`;
   return (
-    <html lang="en">
+    <html lang="en" className="dark">
       <head>
         <HeadContent />
         <script dangerouslySetInnerHTML={{ __html: themeScript }} />
@@ -110,7 +111,12 @@ function RootComponent() {
   const { queryClient } = Route.useRouteContext();
   return (
     <QueryClientProvider client={queryClient}>
-      <div className="min-h-screen flex flex-col">
+      <LoadingScreen />
+      <SmoothScroll />
+      <ScrollProgress />
+      <AuroraBackground />
+      <CursorGlow />
+      <div className="relative z-10 flex min-h-screen flex-col">
         <Navbar />
         <main className="flex-1">
           <Outlet />
