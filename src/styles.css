@@ -46,6 +46,7 @@
 
 /* Light theme (secondary) */
 :root {
+  color-scheme: light;
   --radius: 1rem;
 
   --background: #ffffff;
@@ -83,6 +84,7 @@
 
 /* Premium dark theme (default) */
 .dark {
+  color-scheme: dark;
   --background: #050816;
   --foreground: #ffffff;
   --ink: #01030c;
