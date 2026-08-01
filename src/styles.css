@@ -33,68 +33,89 @@
   --color-input: var(--input);
   --color-ring: var(--ring);
   --color-ink: var(--ink);
+  --color-cyan: var(--cyan);
+  --color-purple: var(--purple);
+  --color-success: var(--success);
 
-  --font-display: "Sora", ui-sans-serif, system-ui, sans-serif;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Space Grotesk", "Sora", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Sora", ui-sans-serif, system-ui, sans-serif;
 
-  --shadow-elegant: 0 20px 50px -20px color-mix(in oklab, var(--primary) 35%, transparent);
-  --shadow-card: 0 8px 30px -10px color-mix(in oklab, var(--ink) 18%, transparent);
+  --shadow-elegant: 0 24px 70px -24px color-mix(in oklab, var(--primary) 60%, transparent);
+  --shadow-card: 0 10px 40px -14px color-mix(in oklab, var(--ink) 55%, transparent);
 }
 
+/* Light theme (secondary) */
 :root {
-  --radius: 0.75rem;
+  color-scheme: light;
+  --radius: 1rem;
 
-  /* Premium Blue / White / Black */
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.16 0.02 250);
-  --ink: oklch(0.13 0.02 250);
+  --background: #ffffff;
+  --foreground: #050816;
+  --ink: #050816;
 
-  --card: oklch(1 0 0);
-  --card-foreground: oklch(0.16 0.02 250);
-  --popover: oklch(1 0 0);
-  --popover-foreground: oklch(0.16 0.02 250);
+  --card: #ffffff;
+  --card-foreground: #050816;
+  --popover: #ffffff;
+  --popover-foreground: #050816;
 
-  --primary: oklch(0.48 0.19 258);          /* deep premium blue */
-  --primary-foreground: oklch(0.99 0.005 250);
-  --primary-glow: oklch(0.62 0.20 254);     /* lighter blue glow */
+  --primary: #2f6bff;
+  --primary-foreground: #ffffff;
+  --primary-glow: #4f8cff;
+  --cyan: #00b8d4;
+  --purple: #7c3aed;
+  --success: #00a878;
 
-  --secondary: oklch(0.97 0.01 250);
-  --secondary-foreground: oklch(0.18 0.02 250);
+  --secondary: #f2f5fb;
+  --secondary-foreground: #0b1220;
 
-  --muted: oklch(0.965 0.008 250);
-  --muted-foreground: oklch(0.50 0.02 250);
+  --muted: #f2f5fb;
+  --muted-foreground: #5a6781;
 
-  --accent: oklch(0.95 0.03 254);
-  --accent-foreground: oklch(0.22 0.10 258);
+  --accent: #eaf1ff;
+  --accent-foreground: #16306e;
 
-  --destructive: oklch(0.58 0.22 27);
-  --destructive-foreground: oklch(0.99 0 0);
+  --destructive: #ff4d6d;
+  --destructive-foreground: #ffffff;
 
-  --border: oklch(0.92 0.01 250);
-  --input: oklch(0.92 0.01 250);
-  --ring: oklch(0.48 0.19 258);
+  --border: rgba(5, 8, 22, 0.1);
+  --input: rgba(5, 8, 22, 0.12);
+  --ring: #4f8cff;
 }
 
+/* Premium dark theme (default) */
 .dark {
-  --background: oklch(0.13 0.02 250);
-  --foreground: oklch(0.98 0.005 250);
-  --ink: oklch(0.08 0.02 250);
-  --card: oklch(0.18 0.02 250);
-  --card-foreground: oklch(0.98 0.005 250);
-  --popover: oklch(0.18 0.02 250);
-  --popover-foreground: oklch(0.98 0.005 250);
-  --primary: oklch(0.62 0.20 254);
-  --primary-foreground: oklch(0.13 0.02 250);
-  --primary-glow: oklch(0.72 0.18 254);
-  --secondary: oklch(0.22 0.02 250);
-  --secondary-foreground: oklch(0.98 0.005 250);
-  --muted: oklch(0.22 0.02 250);
-  --muted-foreground: oklch(0.70 0.02 250);
-  --accent: oklch(0.25 0.05 254);
-  --accent-foreground: oklch(0.98 0 0);
-  --border: oklch(1 0 0 / 12%);
-  --input: oklch(1 0 0 / 15%);
-  --ring: oklch(0.62 0.20 254);
+  color-scheme: dark;
+  --background: #050816;
+  --foreground: #ffffff;
+  --ink: #01030c;
+
+  --card: #111827;
+  --card-foreground: #ffffff;
+  --popover: #0b1220;
+  --popover-foreground: #ffffff;
+
+  --primary: #4f8cff;
+  --primary-foreground: #050816;
+  --primary-glow: #8b5cf6;
+  --cyan: #00e5ff;
+  --purple: #8b5cf6;
+  --success: #00ffb3;
+
+  --secondary: #0b1220;
+  --secondary-foreground: #ffffff;
+
+  --muted: #0b1220;
+  --muted-foreground: #94a3b8;
+
+  --accent: #131c31;
+  --accent-foreground: #ffffff;
+
+  --destructive: #ff4d6d;
+  --destructive-foreground: #ffffff;
+
+  --border: rgba(255, 255, 255, 0.08);
+  --input: rgba(255, 255, 255, 0.12);
+  --ring: #4f8cff;
 }
 
 @layer base {
@@ -105,32 +126,54 @@
     color: var(--color-foreground);
     font-family: var(--font-sans);
     -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
   }
-  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.02em; }
+  h1, h2, h3, h4 { font-family: var(--font-display); letter-spacing: -0.03em; }
+  ::selection { background: color-mix(in oklab, var(--color-primary) 40%, transparent); }
 }
 
 @utility gradient-primary {
-  background-image: linear-gradient(135deg, var(--color-primary), var(--color-primary-glow));
+  background-image: linear-gradient(120deg, var(--color-primary), var(--color-purple) 55%, var(--color-cyan));
 }
 @utility text-gradient {
-  background-image: linear-gradient(135deg, var(--color-primary), var(--color-primary-glow));
+  background-image: linear-gradient(120deg, var(--color-primary), var(--color-purple) 50%, var(--color-cyan));
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
 }
 @utility hero-bg {
   background:
-    radial-gradient(ellipse 80% 60% at 80% 0%, color-mix(in oklab, var(--color-primary-glow) 22%, transparent), transparent 60%),
-    radial-gradient(ellipse 60% 50% at 0% 100%, color-mix(in oklab, var(--color-primary) 18%, transparent), transparent 60%),
+    radial-gradient(ellipse 70% 55% at 75% 0%, color-mix(in oklab, var(--color-purple) 26%, transparent), transparent 60%),
+    radial-gradient(ellipse 60% 50% at 5% 15%, color-mix(in oklab, var(--color-primary) 22%, transparent), transparent 60%),
     var(--color-background);
 }
 @utility glass-card {
-  background: color-mix(in oklab, var(--color-card) 80%, transparent);
-  backdrop-filter: blur(12px);
-  border: 1px solid color-mix(in oklab, var(--color-border) 80%, transparent);
+  background: color-mix(in oklab, var(--color-card) 55%, transparent);
+  backdrop-filter: blur(18px) saturate(140%);
+  border: 1px solid var(--color-border);
+}
+@utility glass-panel {
+  background: color-mix(in oklab, var(--color-card) 40%, transparent);
+  backdrop-filter: blur(24px) saturate(150%);
+  border: 1px solid var(--color-border);
 }
 @utility shadow-elegant { box-shadow: var(--shadow-elegant); }
 @utility shadow-card { box-shadow: var(--shadow-card); }
+@utility grid-overlay {
+  background-image:
+    linear-gradient(to right, color-mix(in oklab, var(--color-foreground) 7%, transparent) 1px, transparent 1px),
+    linear-gradient(to bottom, color-mix(in oklab, var(--color-foreground) 7%, transparent) 1px, transparent 1px);
+  background-size: 64px 64px;
+}
+
+/* Animated RGB gradient border */
+@utility rgb-border {
+  position: relative;
+  isolation: isolate;
+}
+@utility glow-hover {
+  transition: transform 0.35s cubic-bezier(0.22, 1, 0.36, 1), box-shadow 0.35s ease, border-color 0.35s ease;
+}
 
 @keyframes fade-up {
   from { opacity: 0; transform: translateY(20px); }
@@ -138,7 +181,43 @@
 }
 @keyframes float-y {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-10px); }
 }
+@keyframes spin-slow { to { transform: rotate(360deg); } }
+@keyframes aurora {
+  0% { transform: translate3d(0,0,0) scale(1); }
+  33% { transform: translate3d(6%, -4%, 0) scale(1.15); }
+  66% { transform: translate3d(-5%, 5%, 0) scale(0.95); }
+  100% { transform: translate3d(0,0,0) scale(1); }
+}
+@keyframes gradient-pan {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+@keyframes marquee {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
+}
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
 @utility animate-fade-up { animation: fade-up 0.7s ease-out both; }
-@utility animate-float { animation: float-y 4s ease-in-out infinite; }
+@utility animate-float { animation: float-y 5s ease-in-out infinite; }
+@utility animate-aurora { animation: aurora 22s ease-in-out infinite; }
+@utility animate-spin-slow { animation: spin-slow 18s linear infinite; }
+@utility animate-marquee { animation: marquee 32s linear infinite; }
+@utility animate-gradient-pan {
+  background-size: 220% 220%;
+  animation: gradient-pan 8s ease infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}

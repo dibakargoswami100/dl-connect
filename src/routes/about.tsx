@@ -50,7 +50,7 @@ function AboutPage() {
       <section className="py-20 sm:py-28">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-6">
           <Reveal>
-            <div className="rounded-3xl border border-border bg-card p-8 sm:p-10 shadow-card h-full">
+            <div className="rounded-3xl glass-card p-8 sm:p-10 shadow-card h-full">
               <div className="grid h-12 w-12 place-items-center rounded-xl gradient-primary text-primary-foreground">
                 <Target className="h-6 w-6" />
               </div>
@@ -62,7 +62,7 @@ function AboutPage() {
             </div>
           </Reveal>
           <Reveal delay={120}>
-            <div className="rounded-3xl border border-border bg-card p-8 sm:p-10 shadow-card h-full">
+            <div className="rounded-3xl glass-card p-8 sm:p-10 shadow-card h-full">
               <div className="grid h-12 w-12 place-items-center rounded-xl gradient-primary text-primary-foreground">
                 <Eye className="h-6 w-6" />
               </div>
@@ -77,7 +77,7 @@ function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-20 bg-secondary/40">
+      <section className="py-20">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <Reveal>
             <SectionHeading eyebrow="What we stand for" title="Our core values" />
@@ -90,7 +90,7 @@ function AboutPage() {
               { icon: Eye, t: "Transparency", d: "Honest, clear, frequent communication — always." },
             ].map((v, i) => (
               <Reveal key={v.t} delay={i * 80}>
-                <div className="rounded-2xl border border-border bg-card p-6 h-full">
+                <div className="rounded-2xl glass-card p-6 h-full">
                   <div className="grid h-10 w-10 place-items-center rounded-lg gradient-primary text-primary-foreground">
                     <v.icon className="h-5 w-5" />
                   </div>
@@ -142,7 +142,7 @@ function AboutPage() {
       <section className="py-20">
         <div className="mx-auto max-w-5xl px-4 sm:px-6 lg:px-8">
           <Reveal>
-            <div className="rounded-3xl border border-border bg-card p-10 text-center shadow-card">
+            <div className="rounded-3xl glass-card p-10 text-center shadow-card">
               <h2 className="text-3xl font-bold">Let's build something great together.</h2>
               <p className="mt-3 text-muted-foreground">Tell us your goals — we'll bring the talent and the tech.</p>
               <div className="mt-6 flex flex-wrap justify-center gap-3">

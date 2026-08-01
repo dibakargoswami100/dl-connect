@@ -100,7 +100,7 @@ function ContactPage() {
       <section className="py-12 sm:py-16">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 grid lg:grid-cols-[1.4fr_1fr] gap-8">
           <Reveal>
-            <form onSubmit={onSubmit} className="rounded-3xl border border-border bg-card p-6 sm:p-10 shadow-card space-y-5">
+            <form onSubmit={onSubmit} className="rounded-3xl glass-card p-6 sm:p-10 shadow-card space-y-5">
               <h2 className="text-2xl font-bold">Send us a message</h2>
               <div className="grid sm:grid-cols-2 gap-5">
                 <div className="space-y-2">
@@ -141,7 +141,7 @@ function ContactPage() {
 
           <Reveal delay={120}>
             <div className="space-y-5">
-              <div className="rounded-3xl border border-border bg-card p-6 shadow-card">
+              <div className="rounded-3xl glass-card p-6 shadow-card">
                 <h3 className="font-display font-semibold text-lg">Contact information</h3>
                 <ul className="mt-5 space-y-4 text-sm">
                   <li className="flex items-start gap-3">
@@ -190,7 +190,7 @@ function ContactPage() {
                 <p className="mt-2 text-sm opacity-90">Quick questions? Get an instant reply on WhatsApp.</p>
               </a>
 
-              <div className="rounded-3xl border border-border overflow-hidden shadow-card">
+              <div className="rounded-3xl glass-card overflow-hidden shadow-card">
                 <iframe
                   title="Office location"
                   src="https://www.google.com/maps?q=Bangalore&output=embed"

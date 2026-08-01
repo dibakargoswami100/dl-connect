@@ -145,7 +145,7 @@ function ServicesPage() {
 
           <div className="mt-10 flex flex-wrap gap-2">
             {services.map((s) => (
-              <a key={s.id} href={`#${s.id}`} className="rounded-full border border-border bg-card px-3 py-1.5 text-xs font-medium hover:bg-secondary transition-colors">
+              <a key={s.id} href={`#${s.id}`} className="rounded-full glass-card px-3 py-1.5 text-xs font-medium hover:bg-secondary transition-colors">
                 {s.title}
               </a>
             ))}
@@ -158,7 +158,7 @@ function ServicesPage() {
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 space-y-10">
           {services.map((s, i) => (
             <Reveal key={s.id}>
-              <section id={s.id} className="scroll-mt-24 rounded-3xl border border-border bg-card p-6 sm:p-10 shadow-card">
+              <section id={s.id} className="scroll-mt-24 rounded-3xl glass-card p-6 sm:p-10 shadow-card">
                 <div className="grid lg:grid-cols-[1fr_1.5fr] gap-8">
                   <div>
                     <div className="grid h-12 w-12 place-items-center rounded-xl gradient-primary text-primary-foreground">
