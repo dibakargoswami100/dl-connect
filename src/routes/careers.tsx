@@ -111,7 +111,7 @@ function CareersPage() {
           </Reveal>
 
           <Reveal delay={100}>
-            <form onSubmit={onSubmit} className="mt-8 rounded-3xl border border-border bg-card p-6 sm:p-10 shadow-card space-y-6">
+            <form onSubmit={onSubmit} className="mt-8 rounded-3xl glass-card p-6 sm:p-10 shadow-card space-y-6">
               <h2 className="text-2xl font-bold">Candidate Registration</h2>
 
               <div className="grid sm:grid-cols-2 gap-5">
@@ -150,7 +150,7 @@ function CareersPage() {
                 </div>
                 <div className="space-y-2 sm:col-span-2">
                   <Label htmlFor="resume">Resume Upload</Label>
-                  <label htmlFor="resume" className="flex items-center gap-3 rounded-md border border-dashed border-border bg-secondary/40 px-4 py-3 cursor-pointer hover:bg-secondary transition-colors">
+                  <label htmlFor="resume" className="flex items-center gap-3 rounded-md border border-dashed border-border bg-background/40 px-4 py-3 cursor-pointer hover:bg-secondary transition-colors">
                     <Upload className="h-4 w-4 text-primary" />
                     <span className="text-sm text-muted-foreground">
                       {resumeName || "Click to upload PDF, DOC or DOCX"}
