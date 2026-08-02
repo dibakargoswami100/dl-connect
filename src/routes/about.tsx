@@ -1,9 +1,10 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { Target, Eye, Award, Users, Linkedin } from "lucide-react";
+import { Target, Eye, Award, Users } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SectionHeading } from "@/components/site/SectionHeading";
 import { Reveal } from "@/components/site/Reveal";
-import dibakarPhoto from "@/assets/dibakar-goswami.png.asset.json";
+import { LeadershipSection } from "@/components/site/LeadershipSection";
+
 
 export const Route = createFileRoute("/about")({
   head: () => ({
@@ -19,12 +20,6 @@ export const Route = createFileRoute("/about")({
   component: AboutPage,
 });
 
-const leader = {
-  name: "Dibakar Goswami",
-  role: "Founder & CEO",
-  bio: "As the Founder and CEO of DL Talent & Technology, Dibakar drives the company’s strategic vision, empowering global businesses with top-tier talent and innovative technology solutions. With deep expertise in operations and team building, he is dedicated to driving scalable growth and digital transformation for our clients.",
-  photo: dibakarPhoto.url,
-};
 
 function AboutPage() {
   return (
