@@ -104,39 +104,8 @@ function AboutPage() {
       </section>
 
       {/* Leadership */}
-      <section className="py-20 sm:py-28">
-        <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <SectionHeading
-              eyebrow="Leadership"
-              title="Meet the team behind DL"
-              description="Founders with deep experience in talent, operations and technology."
-            />
-          </Reveal>
-          <div className="mt-14 flex justify-center">
-            <Reveal>
-              <div className="relative max-w-lg w-full rounded-3xl border border-border/80 bg-card overflow-hidden shadow-elegant">
-                <div className="absolute inset-0 -z-10">
-                  <div className="h-full w-full gradient-primary opacity-[0.07]" />
-                </div>
-                <div className="h-36 gradient-primary" />
-                <div className="px-10 pb-10 -mt-20">
-                  <div className="h-32 w-32 rounded-3xl bg-card border-2 border-primary/20 overflow-hidden shadow-elegant">
-                    <img src={leader.photo} alt={leader.name} loading="lazy" decoding="async" className="h-full w-full object-cover" />
-                  </div>
-                  <h3 className="mt-6 text-2xl font-display font-bold">{leader.name}</h3>
-                  <p className="text-sm text-primary font-semibold tracking-wide uppercase mt-1">{leader.role}</p>
-                  <div className="mt-5 h-px w-12 gradient-primary" />
-                  <p className="mt-5 text-muted-foreground leading-relaxed">{leader.bio}</p>
-                  <a href="https://www.linkedin.com/in/dibakar-goswami-62910327a" target="_blank" rel="noreferrer noopener" className="mt-6 inline-flex items-center gap-2 text-sm font-semibold text-primary hover:opacity-80 transition-opacity">
-                    <Linkedin className="h-4 w-4" /> Connect on LinkedIn
-                  </a>
-                </div>
-              </div>
-            </Reveal>
-          </div>
-        </div>
-      </section>
+      <LeadershipSection />
+
 
       {/* CTA */}
       <section className="py-20">
