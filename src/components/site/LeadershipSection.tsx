@@ -211,7 +211,9 @@ function LeaderProfile({ leader, flip }: { leader: Leader; flip?: boolean }) {
                 <Linkedin className="h-4 w-4" /> Connect on LinkedIn
               </a>
               <a
-                href={`mailto:${leader.email}`}
+                href="https://forms.gle/BDPbpdv8WdXaxJsc8"
+                target="_blank"
+                rel="noreferrer noopener"
                 className="group inline-flex items-center gap-2 rounded-full glass-card px-6 py-3 text-sm font-semibold text-foreground transition-all duration-300 hover:-translate-y-0.5 hover:border-primary/60 hover:shadow-elegant"
               >
                 <CalendarDays className="h-4 w-4" /> Schedule a Meeting
