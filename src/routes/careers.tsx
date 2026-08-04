@@ -9,6 +9,8 @@ import { Textarea } from "@/components/ui/textarea";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 import { Reveal } from "@/components/site/Reveal";
 import { toast } from "sonner";
+import { supabase } from "@/integrations/supabase/client";
+
 
 export const Route = createFileRoute("/careers")({
   head: () => ({
