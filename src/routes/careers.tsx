@@ -203,7 +203,12 @@ function CareersPage() {
                       type="file"
                       accept=".pdf,.doc,.docx"
                       className="sr-only"
-                      onChange={(e) => setResumeName(e.target.files?.[0]?.name || "")}
+                      onChange={(e) => {
+                        const f = e.target.files?.[0] || null;
+                        setResumeFile(f);
+                        setResumeName(f?.name || "");
+                      }}
+
                     />
                   </label>
                 </div>
