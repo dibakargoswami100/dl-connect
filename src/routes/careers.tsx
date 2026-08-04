@@ -45,12 +45,14 @@ const schema = z.object({
 
 function CareersPage() {
   const [position, setPosition] = useState("");
+  const [resumeFile, setResumeFile] = useState<File | null>(null);
   const [resumeName, setResumeName] = useState<string>("");
   const [submitting, setSubmitting] = useState(false);
 
-  const onSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+  const onSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    const fd = new FormData(e.currentTarget);
+    const form = e.currentTarget;
+    const fd = new FormData(form);
     const data = {
       fullName: String(fd.get("fullName") || ""),
       email: String(fd.get("email") || ""),
@@ -67,15 +69,54 @@ function CareersPage() {
       toast.error(parsed.error.issues[0]?.message || "Please review the form");
       return;
     }
+
     setSubmitting(true);
-    setTimeout(() => {
-      setSubmitting(false);
+    try {
+      let resumeUrl: string | null = null;
+
+      if (resumeFile) {
+        if (resumeFile.size > 5 * 1024 * 1024) {
+          toast.error("Resume must be smaller than 5MB");
+          setSubmitting(false);
+          return;
+        }
+        const ext = resumeFile.name.split(".").pop()?.toLowerCase() || "pdf";
+        const path = `${crypto.randomUUID()}.${ext}`;
+        const { error: uploadError } = await supabase.storage
+          .from("resumes")
+          .upload(path, resumeFile, { contentType: resumeFile.type || undefined });
+        if (uploadError) throw uploadError;
+        resumeUrl = path;
+      }
+
+      const v = parsed.data;
+      const { error } = await supabase.from("job_applications").insert({
+        full_name: v.fullName,
+        email: v.email,
+        phone: v.phone,
+        location: v.location,
+        qualification: v.qualification,
+        experience: v.experience,
+        position: v.position,
+        linkedin: v.linkedin || null,
+        message: v.message || null,
+        resume_url: resumeUrl,
+      });
+      if (error) throw error;
+
       toast.success("Profile submitted! We'll be in touch for future opportunities.");
-      (e.target as HTMLFormElement).reset();
+      form.reset();
       setPosition("");
+      setResumeFile(null);
       setResumeName("");
-    }, 800);
+    } catch (err) {
+      console.error(err);
+      toast.error("Could not submit your profile. Please try again.");
+    } finally {
+      setSubmitting(false);
+    }
   };
+
 
   return (
     <div>
