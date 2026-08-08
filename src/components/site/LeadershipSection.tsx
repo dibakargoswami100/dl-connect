@@ -154,7 +154,7 @@ const leaders: Leader[] = [
     role: "Co-Founder",
     bio: "Lata Bari is the Co-Founder of DL Talent & Technology and plays a key role in client relationship management, recruitment coordination, workforce solutions, and organizational growth. She focuses on delivering exceptional hiring experiences, building long-term client partnerships, and ensuring operational excellence across recruitment and HR services.",
     linkedin:
-      "https://www.linkedin.com/company/dl-talent-technology-%E2%AD%90/?viewAsMember=true",
+      "https://www.linkedin.com/in/lata-bari-685088273/",
     email: "dltalenttechnology@gmail.com",
     photo: lataPhoto.url,
     initials: "LB",
