@@ -185,7 +185,7 @@ function HomePage() {
           <p className="mb-6 text-center text-xs uppercase tracking-[0.3em] text-muted-foreground">
             Partnering with ambitious teams
           </p>
-          <Marquee items={["Northwind SaaS", "BloomKart", "GreenLeaf Studio", "Aster Health", "Lumen AI", "Vertex Labs", "Orbit EdTech", "Finlyft"]} />
+          <Marquee items={["Vision 360", "Alvensa Talent Partners", "Northwind SaaS", "BloomKart", "GreenLeaf Studio", "Aster Health", "Lumen AI", "Vertex Labs", "Orbit EdTech", "Finlyft" , "Exito Talent Solutions"]} />
         </div>
       </section>
 
