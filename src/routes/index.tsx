@@ -56,9 +56,9 @@ const why = [
 ];
 
 const stats = [
-  { value: 50, suffix: "+", label: "Clients Served" },
+  { value: 20, suffix: "+", label: "Clients Served" },
   { value: 1000, suffix: "+", label: "Candidates Placed" },
-  { value: 12, suffix: "+", label: "Countries" },
+  { value: 5, suffix: "+", label: "Countries" },
   { value: 95, suffix: "%", label: "Success Rate" },
 ];
 
