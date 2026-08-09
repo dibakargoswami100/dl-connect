@@ -156,7 +156,7 @@ const leaders: Leader[] = [
     linkedin:
       "https://www.linkedin.com/in/lata-bari-685088273/",
     email: "dltalenttechnology@gmail.com",
-    photo: lataPhoto.url,
+    photo: "/Lata-Img.png",
     initials: "LB",
     badges: [
       "Client Relations",
