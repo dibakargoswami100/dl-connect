@@ -193,7 +193,7 @@ function ContactPage() {
               <div className="rounded-3xl glass-card overflow-hidden shadow-card">
                 <iframe
                   title="Office location"
-                  src="https://www.google.com/maps?q=Bangalore&output=embed"
+                  src="https://www.google.com/maps?q=Kolkata,West+Bengal,India&output=embed"
                   className="w-full h-64 border-0"
                   loading="lazy"
                 />
