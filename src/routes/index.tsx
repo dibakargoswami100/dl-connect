@@ -13,7 +13,7 @@ import { HeroVisual } from "@/components/site/HeroVisual";
 import { Counter } from "@/components/site/Counter";
 import { Marquee } from "@/components/site/Marquee";
 import { motion } from "framer-motion";
-
+// DL_Talent_500x500.png
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -24,7 +24,12 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
-    links: [{ rel: "canonical", href: "/" }],
+    links: [
+       {
+      rel: "icon",
+      href: "/DL_Talent_500x500.png",
+    },
+    ],
   }),
   component: HomePage,
 });
