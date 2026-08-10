@@ -34,7 +34,7 @@ export function Footer() {
           <div>
             <div className="flex items-center gap-3">
               <img
-                src={logoAsset.url}
+                src= "/DL_Talent_500x500.png"
                 alt="DL Talent & Technology"
                 loading="lazy"
                 decoding="async"
