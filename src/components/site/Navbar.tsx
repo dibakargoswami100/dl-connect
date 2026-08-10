@@ -34,7 +34,7 @@ export function Navbar() {
           <span className="relative">
             <span className="absolute -inset-1.5 rounded-xl gradient-primary opacity-0 blur-md transition-opacity duration-300 group-hover:opacity-70" />
             <img
-              src={logoAsset.url}
+              src= "/DL_Talent_500x500.png"
               alt="DL Talent & Technology"
               loading="eager"
               decoding="async"

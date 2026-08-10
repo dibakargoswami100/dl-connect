@@ -138,7 +138,7 @@ const leaders: Leader[] = [
     bio: "Dibakar Goswami is the Founder & CEO of DL Talent & Technology. He leads the company's vision, business strategy, operations, and technology initiatives. With expertise in talent acquisition, recruitment operations, business development, and digital solutions, he is committed to helping startups, SMEs, and enterprises build high-performing teams and scalable business solutions through innovation, efficiency, and technology.",
     linkedin: "https://www.linkedin.com/in/dibakar-goswami-62910327a",
     email: "dltalenttechnology@gmail.com",
-    photo: dibakarPhoto.url,
+    photo: "/Dibakar.Img.png",
     initials: "DG",
     badges: [
       "Leadership",
